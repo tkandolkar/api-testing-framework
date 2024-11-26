@@ -1,0 +1,88 @@
+{
+    "type": "object",
+    "properties": {
+      "terms": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      },
+      "seriesDetail": {
+        "type": "object",
+        "properties": {
+          "FXUSDCAD": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "dimension": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "key",
+                  "name"
+                ]
+              }
+            },
+            "required": [
+              "label",
+              "description",
+              "dimension"
+            ]
+          }
+        },
+        "required": [
+          "FXUSDCAD"
+        ]
+      },
+      "observations": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "d": {
+                "type": "string"
+              },
+              "FXUSDCAD": {
+                "type": "object",
+                "properties": {
+                  "v": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "v"
+                ]
+              }
+            },
+            "required": [
+              "d",
+              "FXUSDCAD"
+            ]
+          }
+        ]
+      }
+    },
+    "required": [
+      "terms",
+      "seriesDetail",
+      "observations"
+    ]
+  }
